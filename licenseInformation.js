@@ -1,3 +1,6 @@
+/* I took the list of licenses from https://gist.github.com/lukas-h/2a5d00690736b4c3a7ba.  I removed
+one license from this list due to its profane title.*/
+
 var licenses = [
 
     {
@@ -183,18 +186,16 @@ var licenses = [
         actualLicenseLink: "https://choosealicense.com/licenses/unlicense/"
     },
     {
-        name: "The Do What the F*** You Want to Public License",
-        badgeLink: "https://img.shields.io/badge/License-WTFPL-brightgreen.svg",
-        alternateText: "License: WTFPL",
-
-        //Once again, I used a different link here because the original used HTTP, not HTTPS
-        actualLicenseLink: "https://choosealicense.com/licenses/wtfpl/"
-    },
-    {
         name: "The zlib/libpng License",
         badgeLink: "https://img.shields.io/badge/License-Zlib-lightgrey.svg",
         alternateText: "License: Zlib",
         actualLicenseLink: "https://opensource.org/licenses/Zlib"
+    },
+    {
+        name: "No License",
+        badgeLink: "",
+        alternateText: "",
+        actualLicenseLink: ""
     }
 ]
 
