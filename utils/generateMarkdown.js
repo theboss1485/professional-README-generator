@@ -15,16 +15,16 @@ function createMarkdownForREADME(responses) {
 
     let markdown = ""
 
-    const title = `# ${responses[0][1]} \n\n`;
+    const title = `# ${responses.title} \n\n`;
 
-    const description = `## Description \n\n ${responses[1][1]}\n\n` ;
+    const description = `## Description \n\n ${responses.description}\n\n` ;
 
     /* I considered putting the table of contents at the top of the README, instead of after the description.  However,
     the acceptance criteria had the sections listed in the order Description, Table of Contents, etc.  I decided to put the description section 
     and the title inside the table of contents because it seemed more complete to me this way.  I didn't put the table of contents inside itself
     because if you are using the table of contents, you are already at the table of contents.*/
     const tableOfContents = "## Table of Contents \n\n\ " + 
-    "- [" + responses[0][1] + "](#"+ responses[0][1] + ")\n\ " +
+    "- [" + responses.title + "](#"+ responses.title + ")\n\ " +
     "- [Description](#description) \n\ " + 
     "- [Installation](#installation) \n\ " + 
     "- [Usage](#usage) \n\ " +
@@ -36,9 +36,9 @@ function createMarkdownForREADME(responses) {
 
     
 
-    const installation = `## Installation \n\n ${responses[2][1]}\n\n`;
+    const installation = `## Installation \n\n ${responses.installation}\n\n`;
 
-    const usage = `## Usage \n\n ${responses[3][1]}\n\n`;
+    const usage = `## Usage \n\n ${responses.usage}\n\n`;
 
     let license = "";
 
@@ -47,7 +47,7 @@ function createMarkdownForREADME(responses) {
     /* The renderLicenseSection method returns an empty string if the project isn't under a license, since one of the TODO 
     comments in this file said it should.  However, if the project isn't under a license, the license section will say so,
     rather than just being blank.*/
-    license = renderLicenseSection(responses[6][1]);
+    license = renderLicenseSection(responses.license);
     console.log("License23", license);
 
     if(license === ""){
@@ -60,13 +60,13 @@ function createMarkdownForREADME(responses) {
     }
     
 
-    const contributing = `## Contributing \n\n ${responses[4][1]}\n\n`;
+    const contributing = `## Contributing \n\n ${responses.contributing}\n\n`;
     
-    const tests = `## Tests \n\n ${responses[5][1]}\n\n`;
+    const tests = `## Tests \n\n ${responses.tests}\n\n`;
 
-    const username = responses[7][1];
+    const username = responses.username;
 
-    const email = responses[8][1];
+    const email = responses.email;
 
     const questions = `# Questions \n\n` + `Q. What is my GitHub username?\n` + 
     `A. My Github username is ${username} The link to my GitHub profile is [https://github.com/${username}](https://github.com/${username}) \n\n` + 

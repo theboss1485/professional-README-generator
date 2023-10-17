@@ -1,12 +1,12 @@
-# fff 
+# My Project 
 
 ## Description 
 
- fff
+ This is my project, created using JavaScript.
 
 ## Table of Contents 
 
- - [fff](#fff)
+ - [My Project](#My Project)
  - [Description](#description) 
  - [Installation](#installation) 
  - [Usage](#usage) 
@@ -17,11 +17,11 @@
 
 ## Installation 
 
- fff
+ N/A
 
 ## Usage 
 
- fff
+ Click the link in the README, and read the information on the project page.
 
 ## License 
 
@@ -29,11 +29,11 @@ This project is under the [Apache 2.0 License](https://opensource.org/licenses/A
 
 ## Contributing 
 
- fff
+ N/A
 
 ## Tests 
 
- fff
+ N/A
 
 # Questions 
 
@@ -41,4 +41,4 @@ Q. What is my GitHub username?
 A. My Github username is fff The link to my GitHub profile is [https://github.com/fff](https://github.com/fff) 
 
 Q. How should I reach you with additional questions?
-A. My email address is fff@gmail.  Email me there and I will respond to you at my earliest convenience.You can also reach out to me on FaceBook or LinkedIn.
+A. My email address is ff@gmail.  Email me there and I will respond to you at my earliest convenience.You can also reach out to me on FaceBook or LinkedIn.

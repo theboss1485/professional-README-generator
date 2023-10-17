@@ -15,6 +15,7 @@ const questions = [
         type: 'input',
         name: 'title',
         message: 'To start, what is the title of your project?',
+        default: 'My Project',
         validate: validateInput
     },
     /*1*/
@@ -46,7 +47,7 @@ const questions = [
     /*4*/
     {
         type: 'input',
-        name: 'contribution',
+        name: 'contributing',
         message: 'How does a user contribute to your project?',
         default: 'N/A',
         validate: validateInput
@@ -65,7 +66,7 @@ const questions = [
         name: 'license',
         message: 'What license should your project have?  Please select a license from the list of options:',
         choices: licenses.map(license => license.name),
-        default: '',
+        default: 'MIT License',
     },
     /*7*/
     {
@@ -118,9 +119,11 @@ async function askQuestions(){
 
     var responses = await inquirer.prompt(questions);
 
+    return responses;
+
     console.log("Responses", responses);
 
-    return Object.entries(responses);
+    //return Object.entries(responses);
 
 }
 
