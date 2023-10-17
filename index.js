@@ -89,20 +89,9 @@ const rl = null;
 
 // TODO: Create a function to write README file
 
-// TODO: Create a function to initialize app
-async function init() {
+// This function creates the README file using the markdown created in the init function.
+function writeREADME(markdown){
 
-    console.log("Welcome to the Professional README Generator.  The program will ask you a series of questions and then generate a professional README based on your responses.");
-
-    // rl = readline.createInterface({
-
-    //     input: process.stdin,
-    //     output: process.stdout
-
-    // });
-
-    let responses = await askQuestions();
-    let markdown = createMarkdownForREADME(responses);
     fs.writeFile('README.md', markdown, function(error){
 
         if(error){
@@ -112,6 +101,19 @@ async function init() {
     });
 }
 
+// TODO: Create a function to initialize app
+
+// This function is called to start the program, and is the main function of the app.
+async function init() {
+
+    console.log("Welcome to the Professional README Generator.  The program will ask you a series of questions and then generate a professional README based on your responses.");
+
+    let responses = await askQuestions();
+    let markdown = createMarkdownForREADME(responses);
+    writeREADME(markdown);
+}
+
+// This function asks the questions of the user after the program starts.
 async function askQuestions(){
 
     var responses = await inquirer.prompt(questions);
@@ -122,6 +124,7 @@ async function askQuestions(){
 
 }
 
+// This function validates the responses that the user types in for most of the questions.
 function validateInput(input){
 
     if(input.trim() === ''){
@@ -131,6 +134,7 @@ function validateInput(input){
     return true;
 }
 
+// This function validates the user's email.
 function validateEmail(input){
 
     //I took this regular expression from https://www.tutorialspoint.com/checking-for-valid-email-address-using-regular-expressions-in-java
@@ -147,6 +151,7 @@ function validateEmail(input){
 
 }
 
+// This function validates the user's GitHub username.
 function validateUsername(input){
 
     /* I useed regex101.com, a tutorial found at https://masteringjs.io/tutorials/fundamentals/regex-not-starting-with#:~:
@@ -167,7 +172,7 @@ function validateUsername(input){
 
 }
 
-// Function call to initialize app
+// This is the function call to initialize the application.
 init();
 
 
