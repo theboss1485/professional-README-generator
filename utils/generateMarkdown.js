@@ -1,30 +1,25 @@
-// TODO: Create a function that returns a license badge based on which license is passed in
-// If there is no license, return an empty string
+
+// I put the function to generate the badge down with the rest of the license functions.
+let badge = null;
 
 // Here, I pull in the file with the licenses information.
 const licenses = require('../licenseInformation.js');
-
-
-
-
-
-// TODO: Create a function to generate markdown for README
 
 //This function generates the markdown of the README based on the responses the user gave.
 function createMarkdownForREADME(responses) {
 
     let markdown = ""
 
-    const title = `# ${responses.title} \n\n`;
+    let title = `# ${responses.title}\n\n`;
 
     const description = `## Description \n\n ${responses.description}\n\n` ;
 
     /* I considered putting the table of contents at the top of the README, instead of after the description.  However,
     the acceptance criteria had the sections listed in the order Description, Table of Contents, etc.  I decided to put the description section 
-    and the title inside the table of contents because it seemed more complete to me this way.  I didn't put the table of contents inside itself
-    because if you are using the table of contents, you are already at the table of contents.*/
+    inside the table of contents because it seemed more complete to me this way.  I didn't put the table of contents inside itself
+    because if you are using the table of contents, you are already at the table of contents.  I didn't put the title in because if the
+    user eneters a space in the title, that will break the respective title link in the table of contents.*/
     const tableOfContents = "## Table of Contents \n\n\ " + 
-    "- [" + responses.title + "](#"+ responses.title + ")\n\ " +
     "- [Description](#description) \n\ " + 
     "- [Installation](#installation) \n\ " + 
     "- [Usage](#usage) \n\ " +
@@ -48,7 +43,6 @@ function createMarkdownForREADME(responses) {
     comments in this file said it should.  However, if the project isn't under a license, the license section will say so,
     rather than just being blank.*/
     license = renderLicenseSection(responses.license);
-    console.log("License23", license);
 
     if(license === ""){
 
@@ -58,6 +52,8 @@ function createMarkdownForREADME(responses) {
 
         licenseSection = "## License \n\n" + license + `\n\n` ;
     }
+
+    title += badge + "\n\n";
     
 
     const contributing = `## Contributing \n\n ${responses.contributing}\n\n`;
@@ -68,13 +64,13 @@ function createMarkdownForREADME(responses) {
 
     const email = responses.email;
 
-    const questions = `# Questions \n\n` + `Q. What is my GitHub username?\n` + 
-    `A. My Github username is ${username} The link to my GitHub profile is [https://github.com/${username}](https://github.com/${username}) \n\n` + 
-    `Q. How should I reach you with additional questions?\nA. My email address is ${email}.  Email me there and I will respond to you at my earliest convenience.`+
-    `You can also reach out to me on FaceBook or LinkedIn.`
+    /* Since the acceptance criteria didn't ask for other ways to reach the author besides the email address (such as FaceBook or LinkedIn),
+    I didn't add them.  The user would have needed to have been asked for a FaceBook or LinkedIn link in addition to what was already asked for.*/
+    const questions = `# Questions \n\n` + `Q. What is my GitHub username?\n\n` + 
+    `A. My Github username is ${username}. The link to my GitHub profile is: [https://github.com/${username}](https://github.com/${username})  \n\n` + 
+    `Q. How should I reach you with additional questions?\n\nA. My email address is ${email}.  Please email me there with additional questions and I will respond to you at my earliest convenience.`
 
     markdown = title + description + tableOfContents + installation + usage + licenseSection + contributing + tests + questions;
-    console.log(markdown);
 
     return markdown;
 
@@ -99,8 +95,6 @@ function createMarkdownForREADME(responses) {
     // This function puts together the badge of the license based on what type of license the user chose.
     function renderLicenseBadge(licenseInQuestion) {
 
-        var badge = null;
-
         if(licenseInQuestion.name === "No License"){
             
             badge = "";
@@ -112,9 +106,6 @@ function createMarkdownForREADME(responses) {
         
         return badge;
     }
-    
-    // TODO: Create a function that returns the license link
-    // If there is no license, return an empty string
 
     /* This function generates the link to the license that the user chose.  If the project isn't under
     a license, the function returns an empty string.*/
@@ -133,9 +124,6 @@ function createMarkdownForREADME(responses) {
 
         return licenseLink;
     }
-    
-    // TODO: Create a function that returns the license section of README
-    // If there is no license, return an empty string
 
     /* This function generates the text of the license section and combines it with the link to the license, and the license badge in order 
     to  make the full license section, minus the heading.  If the project isn't under a license, the function returns an empty string.*/
@@ -143,7 +131,6 @@ function createMarkdownForREADME(responses) {
     
         var licenseInQuestion = findLicense(license)
 
-        console.log("License", licenseInQuestion)
 
         if(licenseInQuestion.name === "No License"){
 
