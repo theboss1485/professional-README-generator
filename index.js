@@ -7,7 +7,6 @@ const inquirer = require('inquirer');
 
 const fs = require('fs');
 
-// TODO: Create an array of questions for user input
 const questions = [
 
     /*0*/
@@ -93,7 +92,10 @@ const rl = null;
 // This function creates the README file using the markdown created in the init function.
 function writeREADME(markdown){
 
-    fs.writeFile('README.md', markdown, function(error){
+    /* I decided to call the generated file generatedREADME.md because the actual README for this program
+    is called README.md and thus calling the generated README, README.md and then running the program would overwrite 
+    this program's actual README that I wrote. */
+    fs.writeFile('generatedREADME.md', markdown, function(error){
 
         if(error){
 
@@ -154,7 +156,7 @@ function validateEmail(input){
 // This function validates the user's GitHub username.
 function validateUsername(input){
 
-    /* I useed regex101.com, a tutorial found at https://masteringjs.io/tutorials/fundamentals/regex-not-starting-with#:~:
+    /* I used regex101.com, a tutorial found at https://masteringjs.io/tutorials/fundamentals/regex-not-starting-with#:~:
     text=Make%20sure%20your%20regular%20expression,the%20start%20of%20the%20string.&text=Another%20approach%20is%20to%20use,the%20set%20negates%20the%20set., and 
     the Xpert Learning assistant AI to help write this regular expression. */
 
