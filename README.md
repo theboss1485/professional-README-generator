@@ -1,4 +1,6 @@
-# My Project 
+# My Project
+
+![Apache 2.0 License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)
 
 ## Description 
 
@@ -6,7 +8,6 @@
 
 ## Table of Contents 
 
- - [My Project](#My Project)
  - [Description](#description) 
  - [Installation](#installation) 
  - [Usage](#usage) 
@@ -38,7 +39,9 @@ This project is under the [Apache 2.0 License](https://opensource.org/licenses/A
 # Questions 
 
 Q. What is my GitHub username?
-A. My Github username is fff The link to my GitHub profile is [https://github.com/fff](https://github.com/fff) 
+
+A. My Github username is fff. The link to my GitHub profile is: [https://github.com/fff](https://github.com/fff)  
 
 Q. How should I reach you with additional questions?
-A. My email address is ff@gmail.  Email me there and I will respond to you at my earliest convenience.You can also reach out to me on FaceBook or LinkedIn.
+
+A. My email address is ff@gmail.com.  Please email me there with additional questions and I will respond to you at my earliest convenience.

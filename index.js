@@ -121,10 +121,6 @@ async function askQuestions(){
 
     return responses;
 
-    console.log("Responses", responses);
-
-    //return Object.entries(responses);
-
 }
 
 // This function validates the responses that the user types in for most of the questions.
@@ -140,8 +136,9 @@ function validateInput(input){
 // This function validates the user's email.
 function validateEmail(input){
 
-    //I took this regular expression from https://www.tutorialspoint.com/checking-for-valid-email-address-using-regular-expressions-in-java
-    const pattern = /^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+$/
+    /*I took this regular expression from https://www.tutorialspoint.com/checking-for-valid-email-address-using-regular-expressions-in-java,
+    and modified it as necessary.*/
+    const pattern = /^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+\.[a-zA-Z0-9]+$/
 
     if(pattern.test(input) === true){
 
@@ -161,7 +158,7 @@ function validateUsername(input){
     text=Make%20sure%20your%20regular%20expression,the%20start%20of%20the%20string.&text=Another%20approach%20is%20to%20use,the%20set%20negates%20the%20set., and 
     the Xpert Learning assistant AI to help write this regular expression. */
 
-    const pattern = /^[^-](?!.*--)[a-zA-Z0-9-]{1,39}[^-]$/
+    const pattern = /^(?!-)(?!.*--)(?:[a-zA-Z0-9-]{0,39})[^-]$/
 
     if(pattern.test(input) === true){
 
@@ -169,8 +166,8 @@ function validateUsername(input){
 
     } else {
 
-        return "That was an invalid response.  GitHub Usernames must contain only alphanumeric characters and dashes, \
-        must not contain more than one dash in a row, must not begin or end with dashes, and must have no more than 39 characters.  Please try again."
+        return "That was an invalid response.  GitHub Usernames must contain only alphanumeric characters and dashes," +
+        "must not contain more than one dash in a row, must not begin or end with dashes, and must have no more than 39 characters.  Please try again."
     }
 
 }
