@@ -1,5 +1,3 @@
-// TODO: Include packages needed for this application
-
 const createMarkdownForREADME = require('./utils/generateMarkdown.js');
 const licenses = require('./licenseInformation.js');
 
@@ -87,24 +85,24 @@ const questions = [
 
 const rl = null;
 
-// TODO: Create a function to write README file
-
 // This function creates the README file using the markdown created in the init function.
 function writeREADME(markdown){
 
     /* I decided to call the generated file generatedREADME.md because the actual README for this program
-    is called README.md and thus calling the generated README, README.md and then running the program would overwrite 
+    is called README.md and thus calling the generated README, README.md, and then running the program would overwrite 
     this program's actual README that I wrote. */
-    fs.writeFile('generatedREADME.md', markdown, function(error){
+    fs.writeFile("generatedREADME.md", markdown, function(error){
 
         if(error){
 
             console.log(error);
-        }
+        
+        } else {
+
+            console.log("The write to the file was successful.")
+        } 
     });
 }
-
-// TODO: Create a function to initialize app
 
 // This function is called to start the program, and is the main function of the app.
 async function init() {
@@ -159,7 +157,6 @@ function validateUsername(input){
     /* I used regex101.com, a tutorial found at https://masteringjs.io/tutorials/fundamentals/regex-not-starting-with#:~:
     text=Make%20sure%20your%20regular%20expression,the%20start%20of%20the%20string.&text=Another%20approach%20is%20to%20use,the%20set%20negates%20the%20set., and 
     the Xpert Learning assistant AI to help write this regular expression. */
-
     const pattern = /^(?!-)(?!.*--)(?:[a-zA-Z0-9-]{0,39})[^-]$/
 
     if(pattern.test(input) === true){
