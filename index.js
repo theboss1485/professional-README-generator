@@ -120,13 +120,13 @@ async function askQuestions(){
     var responses = await inquirer.prompt(questions);
 
     return responses;
-
 }
 
 // This function validates the responses that the user types in for most of the questions.
 function validateInput(input){
 
     if(input.trim() === ''){
+        
         return 'That was an invalid response.  Please try again.'
     }
 
@@ -148,7 +148,6 @@ function validateEmail(input){
 
         return "That was an invalid response. Please try again and enter a valid email address."
     }
-
 }
 
 // This function validates the user's GitHub username.
@@ -168,7 +167,6 @@ function validateUsername(input){
         return "That was an invalid response.  GitHub Usernames must contain only alphanumeric characters and dashes," +
         "must not contain more than one dash in a row, must not begin or end with dashes, and must have no more than 39 characters.  Please try again."
     }
-
 }
 
 // This is the function call to initialize the application.
