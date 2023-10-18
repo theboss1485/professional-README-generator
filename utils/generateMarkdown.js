@@ -17,8 +17,7 @@ function createMarkdownForREADME(responses) {
     /* I considered putting the table of contents at the top of the README, instead of after the description.  However,
     the acceptance criteria had the sections listed in the order Description, Table of Contents, etc.  I decided to put the description section 
     inside the table of contents because it seemed more complete to me this way.  I didn't put the table of contents inside itself
-    because if you are using the table of contents, you are already at the table of contents.  I didn't put the title in because if the
-    user eneters a space in the title, that will break the respective title link in the table of contents.*/
+    because if you are using the table of contents, you are already at the table of contents. */
     const tableOfContents = "## Table of Contents \n\n\ " + 
     "- [Description](#description) \n\ " + 
     "- [Installation](#installation) \n\ " + 
@@ -39,7 +38,7 @@ function createMarkdownForREADME(responses) {
 
     let licenseSection = "";
 
-    /* The renderLicenseSection method returns an empty string if the project isn't under a license, since one of the TODO 
+    /* The renderLicenseSection() method returns an empty string if the project isn't under a license, since one of the TODO 
     comments in this file said it should.  However, if the project isn't under a license, the license section will say so,
     rather than just being blank.*/
     license = renderLicenseSection(responses.license);

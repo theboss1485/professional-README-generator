@@ -2,11 +2,15 @@
 
 ## Description 
 
-My motivation for building this project was to gain experience with using both the inquirer package and NodeJS.  I built this project so that I could write a meaningful JavaScript application and then learn how to invoke it via the command line, using NodeJS.  This project solves the problem of a programmer needing to generate professional READMEs for his or her projects more quickly.  This project lets the user enter in their responses to several questions and then creates a markdown file with those responses.  In this project, I learned the basics of using the inquirer module, and run an application from the command line using NodeJS.  
+My motivation for building this project was to gain experience with using both the inquirer package and NodeJS.  I built this project so that I could write a meaningful JavaScript application and then learn how to invoke it via the command line, using NodeJS.  This project solves the problem of a programmer needing to generate professional READMEs for his or her projects more quickly.  This project lets the user enter in their responses to several questions and then creates a markdown file with those responses.  In this project, I learned the basics of using the inquirer module, and how to run an application from the command line using NodeJS.  
 
 ## Table of Contents (Optional)
 
 This README isn't that long, so N/A.
+
+## Notes to Grader
+
+This is the README that explains the function of this README Generator application.  The sample README that is to be included in this application's files is under the name generatedREADME.md.  Additionally, I decided to keep the file explorer open for the walkthrough video so that it would show the generatedREADME.md file appearing there successfully, and also so that I didn't have to pull it open to be able to open the generated README.
 
 ## Installation
 
@@ -16,7 +20,15 @@ N/A
 
 To view the code for this application, please go to my GitHub profile here: [https://github.com/theboss1485/professional-README-generator](https://github.com/theboss1485/professional-README-generator).
 
-To use the application first make sure NodeJS is installed on your computer. Next, clone the GitHub repository with the "git clone" command.  Then, navigate to the project folder in the command line and type "node index.js", without the quote marks.  This will start the application and the system will begin by asking the user a series of questions.  Type an answer to each question and press Enter.  After the program has finished asking questions, the check the project's folder.  You should see a new file titled generatedREADME.md.  Feel free to rename this file.  I decided not to name the file README.md because running the program would then overwrite the README I am currently writing.
+To use the application first make sure NodeJS is installed on your computer. Next, clone the GitHub repository with the "git clone" command.  Then, navigate to the project folder in the command line and type "node index.js", without the quote marks.  This will start the application and the system will begin by asking the user a series of questions.  Type an answer to each question and press Enter.  After the program has finished asking questions, check the project's folder.  You should see a new file titled generatedREADME.md.  Feel free to rename this file.  I decided not to name the file README.md because running the program would then overwrite this current README.md.
+
+Here is a screenshot of what a successful run of the README generator would look like in the terminal: ![A screenshot of a successful README generator run](./assets/images/a-successful-README-generation.JPG)
+
+## Walkthrough Video Explanation
+
+To view the walkthrough video for the the README generator please use the following link: [https://drive.google.com/file/d/1REPEG3-ukwRHWwRWg_0pR1eTt0MH3PoC/view](https://drive.google.com/file/d/1REPEG3-ukwRHWwRWg_0pR1eTt0MH3PoC/view).  I have also included the walkthrough video in this repository inside of the videos folder, which is inside of the assets folder.
+
+The first thing I do in the walkthrough video is enter "node index.js" into the command line.  This starts the application.  The application begins by asking the user what the title of the application is that the README will be generated for.  After the user enters a title, the application asks what the description of the application is.  Once the user enters this, the system asks more questions, one at a time, and waits for user input on each one.  The system asks for installation instructions, usage instructions, how another user would contribute to the project, and also for tests that the other users would run to test the application in question. For the tests question, I press Enter to accept the default value that is in parentheses, which is N/A.  Next, the system asks what license the application should be under.  The user can select a license from the list of options using the Up and Down arrow keys and confirm it using the Enter key.  The application then asks for the user's GitHub username and email address.  Once the user enters those, the application generates the README file and prints a message that it has been written successfuly.  You can see the new README appear in the file explorer on the right as generatedREADME.md.  I then open a preview of the generatedREADME.md file and show it in its entirety.  I also show that each of the links in the Table of Contents is working properly.
 
 ## Credits
 
