@@ -12,6 +12,8 @@ This README isn't that long, so N/A.
 
 This is the README that explains the function of this README Generator application.  The sample README that is to be included in this application's files is under the name generatedREADME.md.  Additionally, I decided to keep the file explorer open for the walkthrough video so that it would show the generatedREADME.md file appearing there successfully, and also so that I didn't have to pull it open to be able to open the generated README.
 
+I included the walkthrough video in the GitHub repository.  I did this because I wasn't 100 percent sure what was being asked for.  In the "How to Submit the Challenge" section on the Module 9 Challenge page, the instructions say I need to submit the walkthrough video for review.  I wasn't completely sure if this meant just the Google Drive or YouTube link to the video, or if it meant the actual video file, so I have included the video file in the GitHub repository and also submitted the video link on the submission page, just in case.
+
 ## Installation
 
 N/A

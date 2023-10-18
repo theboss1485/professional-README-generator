@@ -27,9 +27,6 @@ function createMarkdownForREADME(responses) {
     "- [Tests](#tests) \n\ " + 
     "- [Questions](#questions) \n\n" 
     
-
-    
-
     const installation = `## Installation \n\n ${responses.installation}\n\n`;
 
     const usage = `## Usage \n\n ${responses.usage}\n\n`;
@@ -53,7 +50,6 @@ function createMarkdownForREADME(responses) {
     }
 
     title += badge + "\n\n";
-    
 
     const contributing = `## Contributing \n\n ${responses.contributing}\n\n`;
     
@@ -130,7 +126,6 @@ function createMarkdownForREADME(responses) {
     
         var licenseInQuestion = findLicense(license)
 
-
         if(licenseInQuestion.name === "No License"){
 
             return "";
@@ -141,7 +136,6 @@ function createMarkdownForREADME(responses) {
             "Please see the license in the repository for more information." 
             return licenseSection;
         }
-       
     }
 }
 
