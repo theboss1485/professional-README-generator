@@ -70,7 +70,7 @@ const questions = [
         type: 'input',
         name: 'username',
         message: 'What is your GitHub username?',
-        default: 'N/A',
+        default: 'someone',
         validate: validateUsername
     },
     /*8*/
@@ -78,7 +78,7 @@ const questions = [
         type: 'input',
         name: 'email',
         message: 'What is your email address?',
-        default: 'N/A',
+        default: 'someone@example.com',
         validate: validateEmail
     }
 ];
