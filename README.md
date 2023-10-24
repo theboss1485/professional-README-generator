@@ -22,7 +22,7 @@ To get the development environment running for this application, first, make sur
 
 To view the code for this application, please go to my GitHub profile here: [https://github.com/theboss1485/professional-README-generator](https://github.com/theboss1485/professional-README-generator).
 
-After following the installation instructions above, type "node index.js" in Git Bash, without the quote marks.  This will start the application and the system will begin by asking the user a series of questions.  Type an answer to each question and press Enter.  After the program has finished asking questions, check the project's folder.  You should see a new file titled generatedREADME.md.  Feel free to rename this file.  I decided not to name the file README.md because running the program would then overwrite this current README.md.
+After following the installation instructions above, type "node index.js" in Git Bash, without the quote marks.  This will start the application and the system will begin by asking the user a series of questions.  Type an answer to each question, or else select an answer from the list of options, and press Enter.  After the program has finished asking questions, check the project's folder.  You should see a new file titled generatedREADME.md.  Feel free to rename this file.  I decided not to name the file README.md because running the program would then overwrite this current README.md.
 
 Here is a screenshot of what a successful run of the README generator would look like in the terminal: ![A screenshot of a successful README generator run](./assets/images/a-successful-README-generation.JPG)
 
