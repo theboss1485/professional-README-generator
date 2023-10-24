@@ -16,13 +16,13 @@ I included the walkthrough video in the GitHub repository.  I did this because I
 
 ## Installation
 
-N/A
+To get the development environment running for this application, first, make sure Node.js is installed on your computer.  Node.js can be downloaded here: [https://nodejs.org/en](https://nodejs.org/en). I recommend downloading the LTS version of Node.js that is on the left side of the page I just gave a link to. Next, clone my GitHub repository with the "git clone" command.  Then, navigate to the project folder in the command line and type "npm i inquirer@8.2.4", without the quote marks.  This installs the inquirer package.
 
 ## Usage
 
 To view the code for this application, please go to my GitHub profile here: [https://github.com/theboss1485/professional-README-generator](https://github.com/theboss1485/professional-README-generator).
 
-To use the application, first, make sure Node.js is installed on your computer.  Node.js can be downloaded here: [https://nodejs.org/en](https://nodejs.org/en). I recommend downloading the LTS version of Node.js that is on the left side of the page I just gave a link to. Next, clone my GitHub repository with the "git clone" command.  Then, navigate to the project folder in the command line and type "npm i inquirer@8.2.4", without the quote marks.  This installs the inquirer package.  Then, type "node index.js", without the quote marks.  This will start the application and the system will begin by asking the user a series of questions.  Type an answer to each question and press Enter.  After the program has finished asking questions, check the project's folder.  You should see a new file titled generatedREADME.md.  Feel free to rename this file.  I decided not to name the file README.md because running the program would then overwrite this current README.md.
+After following the installation instructions above, type "node index.js" in Git Bash, without the quote marks.  This will start the application and the system will begin by asking the user a series of questions.  Type an answer to each question and press Enter.  After the program has finished asking questions, check the project's folder.  You should see a new file titled generatedREADME.md.  Feel free to rename this file.  I decided not to name the file README.md because running the program would then overwrite this current README.md.
 
 Here is a screenshot of what a successful run of the README generator would look like in the terminal: ![A screenshot of a successful README generator run](./assets/images/a-successful-README-generation.JPG)
 
