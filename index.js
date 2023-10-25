@@ -91,26 +91,39 @@ function writeREADME(markdown){
     /* I decided to call the generated file generatedREADME.md because the actual README for this program
     is called README.md and thus calling the generated README, README.md, and then running the program would overwrite 
     this program's actual README that I wrote. */
-    fs.writeFile("generatedREADME.md", markdown, function(error){
+    fs.writeFile("generatedREADME.md", markdown, (err) => {
 
-        if(error){
+        if(err) {
 
-            console.log(error);
+            console.log(err.message);
         
         } else {
 
             console.log("The write to the file was successful.")
-        } 
-    });
+        }
+    }); 
 }
 
 // This function is called to start the program, and is the main function of the app.
 async function init() {
 
+    let responses = undefined;
+
     console.log("Welcome to the Professional README Generator.  The program will ask you a series of questions and then generate a professional README based on your responses.");
 
-    let responses = await askQuestions();
+    try{
+        
+        responses = await askQuestions();
+
+    } catch(error){
+
+        console.log(error.message)
+    }
+
     let markdown = createMarkdownForREADME(responses);
+
+    /*The writeREADME() function isn't inside a try... catch block because the error that is potentially thrown when attempting to write the file
+    is handled inside the writeREADME() function.*/
     writeREADME(markdown);
 }
 
