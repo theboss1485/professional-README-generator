@@ -92,15 +92,9 @@ function writeREADME(markdown){
     is called README.md and thus calling the generated README, README.md, and then running the program would overwrite 
     this program's actual README that I wrote. */
     fs.writeFile("generatedREADME.md", markdown, function(error){
-
-        if(error){
-
-            console.log(error);
         
-        } else {
-
-            console.log("The write to the file was successful.")
-        } 
+        console.log("The write to the file was successful.")
+        
     });
 }
 
@@ -109,9 +103,16 @@ async function init() {
 
     console.log("Welcome to the Professional README Generator.  The program will ask you a series of questions and then generate a professional README based on your responses.");
 
-    let responses = await askQuestions();
-    let markdown = createMarkdownForREADME(responses);
-    writeREADME(markdown);
+    try{
+        let responses = await askQuestions();
+        let markdown = createMarkdownForREADME(responses);
+        writeREADME(markdown);
+    
+    } catch(error){
+
+        console.log(error.message)
+    }
+
 }
 
 // This function asks the questions of the user after the program starts.
