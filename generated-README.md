@@ -38,9 +38,9 @@ This project is under the [The MIT License](https://opensource.org/licenses/MIT)
 
 # Questions 
 
-Q. What is my GitHub username?
+Q. What is your GitHub username?
 
-A. My Github username is theboss1485. The link to my GitHub profile is: [https://github.com/theboss1485](https://github.com/theboss1485)  
+A. My Github username is **theboss1485**. The link to my GitHub profile is: [https://github.com/theboss1485](https://github.com/theboss1485)  
 
 Q. How should I reach you with additional questions?
 
