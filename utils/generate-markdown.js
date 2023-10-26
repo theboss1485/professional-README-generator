@@ -3,7 +3,7 @@
 let badge = null;
 
 // Here, I pull in the file with the licenses information.
-const licenses = require('../licenseInformation.js');
+const licenses = require('../license-information');
 
 //This function generates the markdown of the README based on the responses the user gave.
 function createMarkdownForREADME(responses) {
@@ -61,8 +61,8 @@ function createMarkdownForREADME(responses) {
 
     /* Since the acceptance criteria didn't ask for other ways to reach the author besides the email address (such as FaceBook or LinkedIn),
     I didn't add them.  The user would have needed to have been asked for a FaceBook or LinkedIn link in addition to what was already asked for.*/
-    const questions = `# Questions \n\n` + `Q. What is my GitHub username?\n\n` + 
-    `A. My Github username is ${username}. The link to my GitHub profile is: [https://github.com/${username}](https://github.com/${username})  \n\n` + 
+    const questions = `# Questions \n\n` + `Q. What is your GitHub username?\n\n` + 
+    `A. My Github username is **${username}**. The link to my GitHub profile is: [https://github.com/${username}](https://github.com/${username})  \n\n` + 
     `Q. How should I reach you with additional questions?\n\nA. My email address is ${email}.  Please email me there with additional questions and I will respond to you at my earliest convenience.`
 
     markdown = title + description + tableOfContents + installation + usage + licenseSection + contributing + tests + questions;

@@ -1,5 +1,5 @@
-const createMarkdownForREADME = require('./utils/generateMarkdown.js');
-const licenses = require('./licenseInformation.js');
+const createMarkdownForREADME = require('./utils/generate-markdown.js');
+const licenses = require('./license-information.js');
 
 const inquirer = require('inquirer');
 
@@ -88,10 +88,10 @@ const rl = null;
 // This function creates the README file using the markdown created in the init function.
 function writeREADME(markdown){
 
-    /* I decided to call the generated file generatedREADME.md because the actual README for this program
+    /* I decided to call the generated file generated-README.md because the actual README for this program
     is called README.md and thus calling the generated README, README.md, and then running the program would overwrite 
     this program's actual README that I wrote. */
-    fs.writeFile("generatedREADME.md", markdown, (err) => {
+    fs.writeFile("generated-README.md", markdown, (err) => {
 
         if(err) {
 
