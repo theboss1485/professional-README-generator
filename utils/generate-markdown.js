@@ -3,7 +3,7 @@
 let badge = null;
 
 // Here, I pull in the file with the licenses information.
-const licenses = require('../licenseInformation.js');
+const licenses = require('../license-information');
 
 //This function generates the markdown of the README based on the responses the user gave.
 function createMarkdownForREADME(responses) {
